@@ -1,0 +1,131 @@
+* { box-sizing: border-box }
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  background-color: #efefef;
+}
+
+h1 {
+  font-family: 'Kreon', serif;
+  font-size: 9em;
+  margin: 0;
+  line-height: 1em;
+  text-transform: lowercase;
+  margin-bottom: .5em;
+}
+
+form.project {
+  margin: 5em auto;
+  max-width: 35em;
+}
+form.project ul, 
+form.project ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.prototype { display: none; }
+
+button.add-story, 
+button.add-scenario, 
+button.add-step {
+  background-color: #aaa;
+  border: 0 none;
+  color: #eee;
+  font-size: 1.5em;
+  text-align: center;
+  width: 100%;
+  display: block;
+  padding: 0.3em;
+  border-radius: .5em;
+  margin-top: 1em;
+}
+.story, 
+.scenario {
+  position: relative;
+}
+
+.story > .card {
+  padding: 1.3em 1em;
+  background-color: white;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+.story > .card > .description, 
+.scenario > .title {
+  display: block;
+  min-height: 8em;
+  width: 100%;
+  border: 0 none;
+  resize: none;
+  background-color: transparent;
+  font-size: 2em;
+  line-height: 1.2em;
+  background-image: url('blue-rule.png');
+  overflow: hidden;
+}
+
+input:focus, textarea:focus {
+  outline: 0 none;
+}
+
+.story > .remove, .scenario > .remove {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  display: block;
+}
+.more-less { 
+  display: block;
+  text-align: center;
+}
+.more-less > .more { display: none; }
+.less > .more-less > .more { display: block; }
+.less > .more-less > .less { display: none; }
+
+.scenario {
+  margin: 1em 0;
+  padding: 1em;
+  background-color: white;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.scenario > .title {
+  min-height: 1em;
+}
+
+.scenario > .steps {
+  padding-top: 1em;
+}
+
+.step {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.step select {
+  border: 0 none;
+  outline: 0 none;
+}
+
+.step .step-definition {
+  border: 0 none;
+  background: url('blue-rule.png') top left transparent;
+  line-height: 1.6em;
+  color: orange;
+  width: 70%;
+}
+
+.step.exists .step-definition {
+  color: black;
+}
+
+.step .edit { display: none; }
+.step.exists .add { display: none; }
+.step.exists .edit { display: inline; }
